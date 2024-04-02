@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { soundtrack } from "../data/data"
+import MusiCard from "./MusiCard";
 
 const Player = () => {
 
@@ -26,13 +27,7 @@ const Player = () => {
     }
     return (
         <div>
-            <>
-                <p>{currentAudio.name}</p>
-                <p>{currentAudio.bg}</p>
-                <p>{currentAudio.src}</p>
-                <br />
-            </>
-
+            <MusiCard track={currentAudio}/>
             <button onClick={handlePreviousMusic}>Previous</button>
             <button onClick={handleNextMusic}>Next</button>
         </div>
