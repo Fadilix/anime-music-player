@@ -36,6 +36,12 @@ const MusicBar: React.FC<PropsType> = ({ audio }) => {
         audio.currentTime = seekTime;
     };
 
+    const formatTime = (timeInSeconds: number) => {
+        const minutes = Math.floor(timeInSeconds / 60);
+        const seconds = Math.floor(timeInSeconds % 60);
+        return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    };
+
     return (
         <div className="music-bar-container">
             <div className="music-bar" onClick={handleProgressBarClick}>
@@ -44,6 +50,14 @@ const MusicBar: React.FC<PropsType> = ({ audio }) => {
                         width: `${(currentTime / audioDuration) * 100}%`,
                     }}
                 ></div>
+            </div>
+
+            <div style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "right"
+            }}>
+                <p>{formatTime(currentTime)} / {formatTime(audioDuration)}</p>
             </div>
         </div>
     );

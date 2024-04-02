@@ -2,7 +2,7 @@ import play from "../assets/play.svg";
 import pause from "../assets/pause.svg";
 import previous from "../assets/previous.svg";
 import next from "../assets/next.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../scss/Play.scss";
 
 // Defining types for props
@@ -16,6 +16,21 @@ type PlayProps = {
 const Play: React.FC<PlayProps> = ({ audio, soundtrack, index, setIndex }) => {
     const [isPlaying, setIsPlaying] = useState(false);
 
+    // Reset audio when track ends
+    useEffect(() => {
+        const handleTrackEnd = () => {
+            setIsPlaying(false);
+            audio.pause();
+            audio.currentTime = 0;
+        };
+
+        audio.addEventListener('ended', handleTrackEnd);
+
+        return () => {
+            audio.removeEventListener('ended', handleTrackEnd);
+        };
+    }, [audio]);
+    
     // handling the pause button
     const handlePause = () => {
         setIsPlaying(!isPlaying);
