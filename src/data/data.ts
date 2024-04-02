@@ -9,6 +9,8 @@ import knybg from "../assets/kny.jpg";
 import opmbg from "../assets/opm.jpg";
 import hxh from "../sounds/hxh_dep.mp3";
 import hxhbg from "../assets/hxh.jpg";
+import dbzkai from "../sounds/dbzkai.mp3";
+import dbzkaibg from "../assets/dbzkaibg.jpg";
 
 export const soundtrack = [
   {
@@ -38,5 +40,11 @@ export const soundtrack = [
     name: "Black Clover Opening 3 - Black Rover",
     src: blackC,
     bg: blackCbg,
+  },
+
+  {
+    name: "Dragon Ball Z Kai - Fight It Out",
+    src: dbzkai,
+    bg: dbzkaibg,
   },
 ];
