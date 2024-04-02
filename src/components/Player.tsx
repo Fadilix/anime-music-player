@@ -2,6 +2,7 @@ import { useState } from "react";
 import { soundtrack } from "../data/data"
 import MusiCard from "./MusiCard";
 import Play from "./Play";
+import MusicBar from "./MusicBar";
 
 const Player = () => {
 
@@ -27,6 +28,10 @@ const Player = () => {
                 soundtrack={soundtrack}
                 index={index}
                 setIndex={setIndex}
+            />
+
+            <MusicBar
+                audio={audio}
             />
         </div>
     )

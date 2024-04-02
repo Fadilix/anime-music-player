@@ -1,0 +1,14 @@
+.music-bar-container {
+    .music-bar {
+        height: 5px;
+        width: 100%;
+        background-color: white;
+
+        .bar {
+            height: 100%;
+            background-color: black;
+            transition: .3s all ease;
+        }
+
+    }
+}
