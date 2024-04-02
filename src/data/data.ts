@@ -12,7 +12,7 @@ import hxhbg from "../assets/hxh.jpg";
 
 export const soundtrack = [
   {
-    name: "Download Shingeki no Kyojin 2 Opening - Shinzou wo Sasageyo!",
+    name: "Shingeki no Kyojin 2 Opening - Shinzou wo Sasageyo!",
     src: snk,
     bg: snkBg,
   },
