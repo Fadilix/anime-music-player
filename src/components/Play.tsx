@@ -3,14 +3,18 @@ import pause from "../assets/pause.svg";
 import previous from "../assets/previous.svg";
 import next from "../assets/next.svg";
 import { useState } from "react";
+import "../scss/Play.scss";
 
 
-type audioType = {
-    audio: HTMLAudioElement
+type PlayProps = {
+    soundtrack: object[],
+    audio: HTMLAudioElement,
+    index: number,
+    setIndex: React.Dispatch<React.SetStateAction<number>>
 }
 
 
-const Play: React.FC<audioType> = ({ audio }) => {
+const Play: React.FC<PlayProps> = ({ audio, soundtrack, index, setIndex }) => {
     const [isPlaying, setIsPlaying] = useState(false);
 
     const handlePause = () => {
@@ -23,9 +27,22 @@ const Play: React.FC<audioType> = ({ audio }) => {
         audio.play()
     }
 
+
+    const handleNextMusic = () => {
+        setIndex((index + 1) % soundtrack.length);
+    }
+
+    // handling clicking on (previous) button
+    const handlePreviousMusic = () => {
+        if (!soundtrack[index - 1]) {
+            setIndex(soundtrack.length - 1);
+        } else {
+            setIndex((prevIndex: number) => prevIndex - 1);
+        }
+    }
     return (
-        <div>
-            <button>
+        <div className="play">
+            <button onClick={handlePreviousMusic}>
                 <img src={previous} alt="" />
             </button>
 
@@ -39,7 +56,7 @@ const Play: React.FC<audioType> = ({ audio }) => {
                     <img src={pause} alt="" />
                 </button>
             )}
-            <button>
+            <button onClick={handleNextMusic}>
                 <img src={next} alt="" />
             </button>
         </div>

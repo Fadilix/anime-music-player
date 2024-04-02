@@ -12,8 +12,13 @@ const MusiCard: React.FC<trackType> = ({ track }) => {
 
     return (
         <div className="card">
-            <div className="image">
-                <img src={track.bg} alt="" />
+            <div
+                className="image"
+                style={{
+                    background: `url(${track.bg})`,
+                    backgroundSize: "cover"
+                } }
+                >
             </div>
             <p>{track.name}</p>
             <p>Unknown</p>

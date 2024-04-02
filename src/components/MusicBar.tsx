@@ -1,7 +1,9 @@
 const MusicBar = () => {
-  return (
-    <div>MusicBar</div>
-  )
+    return (
+        <div>
+            
+        </div>
+    )
 }
 
-export default MusicBar
+export default MusicBar;

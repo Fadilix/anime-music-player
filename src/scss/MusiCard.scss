@@ -10,12 +10,10 @@
     .image {
         overflow: hidden;
         width: 400px;
-        // height: ;
-        position: relative;
-
-        img {
-            width: 120%;
-        }
+        height: 400px;
+        border-radius: 12px;
+        // background-size: contain;
+        // background-position: center;
     }
 
     p {}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { soundtrack } from "../data/data"
 import MusiCard from "./MusiCard";
+import Play from "./Play";
 
 const Player = () => {
 
@@ -13,23 +14,20 @@ const Player = () => {
 
     // handling clicking on (next) button
     // We're doing % here because we don't wanna go overlap the list
-    const handleNextMusic = () => {
-        setIndex((index + 1) % soundtrack.length);
-    }
 
-    // handling clicking on (previous) button
-    const handlePreviousMusic = () => {
-        if (!soundtrack[index - 1]) {
-            setIndex(soundtrack.length - 1);
-        } else {
-            setIndex((prevIndex: number) => prevIndex - 1);
-        }
-    }
+
+    const audio = new Audio(currentAudio.src);
     return (
         <div>
-            <MusiCard track={currentAudio}/>
-            <button onClick={handlePreviousMusic}>Previous</button>
-            <button onClick={handleNextMusic}>Next</button>
+            <MusiCard
+                track={currentAudio}
+            />
+            <Play
+                audio={audio}
+                soundtrack={soundtrack}
+                index={index}
+                setIndex={setIndex}
+            />
         </div>
     )
 }

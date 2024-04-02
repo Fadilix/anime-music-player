@@ -1,0 +1,13 @@
+.play {
+    background-color: white;
+    backdrop-filter: blur(5px);
+    button {
+        all: unset;
+        cursor: pointer;
+        width: 40px;
+
+        img {
+            width: 100%;
+        }
+    }
+}
