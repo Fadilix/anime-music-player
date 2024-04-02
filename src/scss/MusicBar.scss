@@ -1,14 +1,18 @@
 .music-bar-container {
+    margin-block: 10px;
+
     .music-bar {
-        height: 5px;
+        height: 8px;
         width: 100%;
-        background-color: white;
+        background-color: #eee;
+        position: relative;
+        overflow: hidden;
+        border-radius: 3px;
 
         .bar {
             height: 100%;
-            background-color: black;
-            transition: .3s all ease;
+            background-color: #333;
+            transition: width 0.3s ease;
         }
-
     }
 }

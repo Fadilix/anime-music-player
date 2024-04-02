@@ -30,6 +30,7 @@ const Play: React.FC<PlayProps> = ({ audio, soundtrack, index, setIndex }) => {
 
     // handling the next button
     const handleNextMusic = () => {
+        audio.currentTime = 0;
         audio.pause();
         setIsPlaying(false);
         setIndex((index + 1) % soundtrack.length);
@@ -37,6 +38,7 @@ const Play: React.FC<PlayProps> = ({ audio, soundtrack, index, setIndex }) => {
 
     // handling clicking on (previous) button
     const handlePreviousMusic = () => {
+        audio.currentTime = 0;
         audio.pause();
         setIsPlaying(false);
         if (!soundtrack[index - 1]) {
