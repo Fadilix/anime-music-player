@@ -11,6 +11,8 @@ import hxh from "../sounds/hxh_dep.mp3";
 import hxhbg from "../assets/hxh.jpg";
 import dbzkai from "../sounds/dbzkai.mp3";
 import dbzkaibg from "../assets/dbzkaibg.jpg";
+import onepiece from "../sounds/one_piece.mp3";
+import onepiecebg from "../assets/one_piece.jpeg";
 
 export const soundtrack = [
   {
@@ -46,5 +48,10 @@ export const soundtrack = [
     name: "Dragon Ball Z Kai - Fight It Out",
     src: dbzkai,
     bg: dbzkaibg,
+  },
+  {
+    name: "One Piece - Hope",
+    src: onepiece,
+    bg: onepiecebg,
   },
 ];

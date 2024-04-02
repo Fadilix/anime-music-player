@@ -6,8 +6,8 @@ const GitHub: React.FC = () => {
     return (
         <div className='github-button'>
             <button>
-                <a href="https://github.com/Fadilix">
-                    <img src={github} alt="" />
+                <a href="https://github.com/Fadilix/anime-music-player">
+                    <img src={github} alt="GitHub Icon" />
                 </a>
             </button>
         </div>
