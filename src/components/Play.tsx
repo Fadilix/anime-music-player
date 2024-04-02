@@ -30,7 +30,7 @@ const Play: React.FC<PlayProps> = ({ audio, soundtrack, index, setIndex }) => {
             audio.removeEventListener('ended', handleTrackEnd);
         };
     }, [audio]);
-    
+
     // handling the pause button
     const handlePause = () => {
         setIsPlaying(!isPlaying);
