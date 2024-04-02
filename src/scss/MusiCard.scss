@@ -7,7 +7,6 @@
 }
 
 .card {
-    
     .image {
         overflow: hidden;
         width: 400px;
@@ -17,5 +16,9 @@
         // background-position: center;
     }
 
-    p {}
+    .track-name {
+        font-weight: bold;
+        font-size: 20px;
+        margin-block: 20px;
+    }
 }

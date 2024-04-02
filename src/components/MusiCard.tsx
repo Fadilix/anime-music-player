@@ -17,11 +17,16 @@ const MusiCard: React.FC<trackType> = ({ track }) => {
                 style={{
                     background: `url(${track.bg})`,
                     backgroundSize: "cover"
-                } }
-                >
+                }}
+            >
             </div>
-            <p>{track.name}</p>
-            <p>Unknown</p>
+            <p className="track-name">
+                {
+                    track.name.length > 40 ?
+                        track.name.substring(0, 40) + "..."
+                        : track.name
+                }
+            </p>
         </div>
     )
 }

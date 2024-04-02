@@ -19,13 +19,13 @@ const Play: React.FC<PlayProps> = ({ audio, soundtrack, index, setIndex }) => {
     // handling the pause button
     const handlePause = () => {
         setIsPlaying(!isPlaying);
-        audio.pause()
+        audio.pause();
     }
 
     // handling the resume button
     const handlePlay = () => {
         setIsPlaying(!isPlaying);
-        audio.play()
+        audio.play();
     }
 
     // handling the next button
