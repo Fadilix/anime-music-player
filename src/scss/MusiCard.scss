@@ -7,6 +7,11 @@
 }
 
 .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
     .image {
         overflow: hidden;
         width: 400px;
@@ -17,11 +22,20 @@
         background-position: top;
         background-repeat: no-repeat;
         background-clip: border-box;
+
+        @media screen and (max-width: 510px) {
+            width: 200px;
+            height: 200px;
+        }
     }
 
     .track-name {
         font-weight: bold;
         font-size: 20px;
         margin-block: 20px;
+
+        @media screen and (max-width: 510px) {
+            font-size: 15px;
+        }
     }
 }

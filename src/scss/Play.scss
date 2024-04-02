@@ -11,6 +11,10 @@
         cursor: pointer;
         width: 60px;
 
+        @media screen and (max-width: 510px) {
+            width: 35px;
+        }
+
         img {
             width: 100%;
         }

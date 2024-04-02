@@ -13,12 +13,23 @@
     justify-content: center;
 
     .mp3 {
+        padding-top: 20px;
         width: 500px;
         border-radius: 12px;
-        height: 600px;
+        height: 650px;
         display: flex;
         align-items: center;
         justify-content: center;
         box-shadow: 0 0 5px white;
+    }
+
+}
+
+@media screen and (max-width: 510px) {
+    .home {
+        .mp3 {
+            width: 300px;
+            height: 500px;
+        }
     }
 }

@@ -16,6 +16,11 @@ import onepiecebg from "../assets/one_piece.jpeg";
 
 export const soundtrack = [
   {
+    name: "Kimetsu No Yaiba - Opening 1",
+    src: kny,
+    bg: knybg,
+  },
+  {
     name: "Shingeki no Kyojin 2 Opening - Shinzou wo Sasageyo!",
     src: snk,
     bg: snkBg,
@@ -30,12 +35,6 @@ export const soundtrack = [
     name: "Hunter x Hunter Opening - Departure",
     src: hxh,
     bg: hxhbg,
-  },
-
-  {
-    name: "Kimetsu No Yaiba - Opening 1",
-    src: kny,
-    bg: knybg,
   },
 
   {
