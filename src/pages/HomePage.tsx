@@ -1,3 +1,4 @@
+import GitHub from "../components/GitHub";
 import Player from "../components/Player";
 import "../scss/HomePage.scss"
 
@@ -8,6 +9,7 @@ const HomePage = () => {
             <div className="mp3">
                 <Player />
             </div>
+            <GitHub />
         </div>
     )
 }

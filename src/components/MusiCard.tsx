@@ -1,9 +1,11 @@
 import "../scss/MusiCard.scss"
+
 type sound = {
     name: string,
     src: string,
     bg: string
 }
+
 type trackType = {
     track: sound
 }
