@@ -1,11 +1,13 @@
 import Player from "../components/Player"
+import "../scss/HomePage.scss"
+
 
 const HomePage = () => {
-  return (
-    <div>
-        <Player />
-    </div>
-  )
+    return (
+        <div className="home">
+            <Player />
+        </div>
+    )
 }
 
 export default HomePage
