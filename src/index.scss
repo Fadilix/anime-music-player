@@ -13,7 +13,7 @@ body {
   // background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 100vh;
   backdrop-filter: brightness(0.4);
 
   p {

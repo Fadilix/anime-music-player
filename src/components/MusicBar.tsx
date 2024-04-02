@@ -52,12 +52,15 @@ const MusicBar: React.FC<PropsType> = ({ audio }) => {
                 ></div>
             </div>
 
-            <div style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "right",
-                marginTop: "5px"
-            }}>
+            <div
+                style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "right",
+                    marginTop: "5px"
+                }}
+                className="time"
+            >
                 <p>{formatTime(currentTime)} / {formatTime(audioDuration)}</p>
             </div>
         </div>
