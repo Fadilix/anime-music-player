@@ -20,11 +20,13 @@ export const soundtrack = [
     src: kny,
     bg: knybg,
   },
+
   {
     name: "Shingeki no Kyojin 2 Opening - Shinzou wo Sasageyo!",
     src: snk,
     bg: snkBg,
   },
+
   {
     name: "One Punch Man Opening - THE HERO",
     src: opm,
@@ -48,6 +50,7 @@ export const soundtrack = [
     src: dbzkai,
     bg: dbzkaibg,
   },
+
   {
     name: "One Piece - Hope",
     src: onepiece,
