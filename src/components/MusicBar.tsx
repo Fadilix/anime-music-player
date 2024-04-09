@@ -18,6 +18,7 @@ const MusicBar: React.FC<PropsType> = ({ audio }) => {
             setAudioDuration(audio.duration);
         };
 
+
         audio.addEventListener('timeupdate', handleTimeUpdate);
         audio.addEventListener('loadedmetadata', handleLoadedMetadata);
 
